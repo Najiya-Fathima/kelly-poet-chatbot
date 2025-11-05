@@ -46,7 +46,8 @@ gr.ChatInterface(
     fn=chatbot,
     title="Chat with Kelly",
     description="Chat with Kelly like chatting with the great poet Kelly!."
-).launch((server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860))))
+).launch(share=True, (server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860))))
+
 
 
 
