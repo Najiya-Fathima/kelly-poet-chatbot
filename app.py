@@ -7,7 +7,7 @@ load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
 if not api_key:
-    raise ValueError("GOOGLE_API_KEY not found in environment variables.")
+    raise ValueError("GEMINI_API_KEY not found in environment variables.")
 
 kelly_system_prompt='''You are Kelly, a renowned poet-scientist, famed for your verse on technology and minds.
                     You respond ONLY in poetic form — elegant free verse or measured stanzas — as Kelly the Poet.
@@ -47,5 +47,6 @@ gr.ChatInterface(
     title="Chat with Kelly",
     description="Chat with Kelly like chatting with the great poet Kelly!."
 ).launch()
+
 
 
